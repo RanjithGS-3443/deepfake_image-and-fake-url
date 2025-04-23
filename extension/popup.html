@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Phishing & Deepfake Detector</title>
+  <style>
+    body {
+      width: 400px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+    }
+    
+    h1 {
+      font-size: 18px;
+      margin-top: 0;
+      color: #333;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+    }
+    
+    .status-container {
+      margin-bottom: 15px;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+    
+    .status-header {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .warning-details {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #fff3f3;
+      border-left: 3px solid #dc3545;
+      border-radius: 3px;
+    }
+    
+    .warning-details ul {
+      margin: 5px 0;
+      padding-left: 20px;
+    }
+    
+    .image-list {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+    }
+    
+    .image-item {
+      padding: 8px;
+      margin-bottom: 8px;
+      border-radius: 4px;
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .image-item.deepfake {
+      background-color: #fff3f3;
+      border-left: 3px solid #dc3545;
+    }
+    
+    .image-item.safe {
+      background-color: #f0fff0;
+      border-left: 3px solid #28a745;
+    }
+    
+    .image-item.error {
+      background-color: #f8f9fa;
+      border-left: 3px solid #6c757d;
+    }
+    
+    .image-info {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .image-size {
+      font-size: 12px;
+      color: #666;
+    }
+    
+    .image-type {
+      font-size: 12px;
+      color: #666;
+      font-style: italic;
+    }
+    
+    .deepfake-warning {
+      color: #dc3545;
+      font-weight: bold;
+    }
+    
+    .safe-text {
+      color: #28a745;
+    }
+    
+    .error-text {
+      color: #6c757d;
+    }
+    
+    .analysis-summary {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #f0f0f0;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    
+    .error-details {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #fff3f3;
+      border: 1px solid #dc3545;
+      border-radius: 4px;
+    }
+    
+    .error-message {
+      color: #dc3545;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Phishing & Deepfake Detector</h1>
+  
+  <div class="status-container">
+    <div class="status-header">URL Analysis:</div>
+    <div id="urlStatus">Analyzing...</div>
+  </div>
+  
+  <div class="status-container">
+    <div class="status-header">Image Analysis:</div>
+    <div id="imageStatus">Analyzing...</div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html> 
